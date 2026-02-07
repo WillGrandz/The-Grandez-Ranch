@@ -1,0 +1,123 @@
+/* General reset */
+@font-face { font-family: myFont; src: url(Font/NB-International-Pro-Regular.woff);}
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: myFont;}
+ul {list-style: none;} a {text-decoration: none; color: white;}
+/* HEADER Section */
+header {
+    position: relative; width: 100%; background-image: url('images/hero.jpg');
+    background-size: cover; background-position: center; height: 56.4vw; /* 16:9 aspect ratio for the image */
+}
+/* Logo */
+nav {position: absolute; top: 20px; left: 50%; transform: translateX(-50%);} /* Center the logo horizontally */
+nav img.logo {width: 12em; height: auto;}
+/* Menu Icon */
+.icon-container {
+    position: fixed; /* Sticky when scrolling  */
+    top: 20px; left: 20px; z-index: 1003; transition: color 0.3s ease;
+}
+/* Makes the close button (X) white when the menu is open */
+.icon-container .close-icon {color: white;}
+.icon-container .close-icon:hover {color: #c89977;} /* Brown color at hover */
+/* Burger Icon */
+.burger-icon, .close-icon {font-size: 32px; cursor: pointer; transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;}
+.icon-black i {color: black; }
+/* Initially show burger icon */
+.burger-icon {display: block; font-size: 32px; cursor: pointer; color: white;}
+.burger-icon:hover {color: #453b39;}
+/* Initially hide close icon */
+.close-icon {display: none; font-size: 32px; cursor: pointer; opacity: 0;} /* Hide close icon with opacity */
+.close-icon:hover {color: #c89977;}
+/* Curtain Menu (Overlay) */
+.curtain-menu {
+    position: fixed; height: 100%; width: 0; top: 0; left: 0; display: flex; z-index: 1002;
+    justify-content: center; align-items: center;
+    background-color: rgba(0, 0, 0, 0.95); /* Black background with opacity */
+    overflow-x: hidden; /* Disables horizontal scrolling */
+    transition: 0.5s; /* Smooth opening/closing transition */ 
+}
+/* Curtain menu content */
+.curtain-menu ul {list-style-type: none; text-align: center;}
+.curtain-menu ul li {margin: 20px 0;}
+.curtain-menu ul li a {color: white; font-size: 36px; text-decoration: none; transition: color 0.3s ease;}
+.curtain-menu ul li a:hover {color: #f0ccb0;}
+/* When the menu is active (showing) */
+.curtain-menu.active {width: 100%;}
+/* Hero Section */
+.hero-content { 
+    display: flex; justify-content: center; align-items: center; text-align: center;
+    color: white;height: 100%; /* Fill the full height of the header */
+}
+/* Styling for the button */
+.btn {
+    background-color: transparent; border: none; padding: 10px; cursor: pointer; outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+/* Styling the SVG inside the button */
+.play-icon {width: 100px; height: 100px; transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */}
+/* Hover effect for the button */
+.btn:hover .play-icon {transform: scale(1.2);}/* Enlarges the SVG on hover */
+/* Modal container */
+.modal {
+    display: none;/* Hidden by default */
+    position: fixed; z-index: 1001; left: 0; top: 0;width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; overflow: auto;
+}
+/* Modal content (video) */
+.modal-content {
+    margin: 3% auto; /* Adjusting the top margin here */
+    position: relative; width: 80%; height: auto; background-color: transparent; padding-top: 2em;
+}
+/* Close button */
+.close {position: absolute; top: -25px; right: 40px; color: white; font-size: 40px; cursor: pointer;}
+/* Container */
+.container {width: 100%; max-width: 1200px; margin: auto; padding: 0 15px;}
+/* MOVIE DETAILS section */
+#movie-details {padding: 20px; background-color: white; margin: 2.5em 0;}
+.details-grid { max-width: 800px; display: flex; flex-wrap: wrap; justify-content: left; gap: 50px;}
+.detail-item > p { 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 0.5em; color: #888888; font-size: 0.8rem; word-spacing: 0.1px;
+}
+.detail-item > h4 {font-size: 1.8rem;}
+/* PAGE LINE */
+.full-width-line {width: 92%; margin: 0 auto; height: 0.2px; background-color: #000;}
+/* POSTER Section */
+#poster{padding: 60px 0; text-align: center;}
+.poster-grid {margin-top: 2.5em;}
+.poster-grid img {
+    max-width: 30%; /* Smaller image size */
+    height: auto; display: block; margin: 0 auto;
+}
+/* Poster paragraph Style */
+.poster-paragraph {max-width: 800px; margin: auto;}
+#poster p {font-size: 1.6rem; text-align: left; margin-left: 8.4em; line-height: 2.5rem; font-weight: 100;}
+/* FOOTER Section */
+footer {background-color: #000; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 6em;}
+/* Back to Top Arrow */
+.back-to-top {margin-top: 20px; text-align: center;}
+.back-to-top a {text-decoration: none; color: white;  transition: color 0.3s ease;}
+.back-to-top a:hover {color: #f0ccb0;}
+.back-to-top a i {font-size: 2rem; margin-bottom: 0.5em;}
+/* Links */
+.social-links {list-style: none; padding: 0; margin: 10px 0;}
+.social-links li {display: inline-block;  margin: 0 25px;}
+.social-links a {text-decoration: none; color: white; font-size: 2rem; transition: color 0.3s;}
+.social-links a:hover {color: #f0ccb0;}
+/* Certification */
+.footer-paragraph {margin-top: 2em; margin-bottom: 2em; font-size: 1rem;}   
+/* RESPONSIVE DESIGN */
+@media (max-width: 1000px) {#poster p {font-size: 1.3rem; margin-left: 11em; padding-right: 2em;}}
+@media (max-width: 768px) {
+    nav img.logo {width: 10em;}/* Smaller logo on smaller screens */
+    .btn {font-size: 14px; padding: 8px 16px;}
+    .details-grid { flex-direction: column; align-items: center;}
+    h4 {font-size: 1rem;} .detail-item {width: 90%;}/* Full width for small screens */
+    .poster-grid {margin-top: 3.5em;} .poster-grid img {max-width: 100%;}/* Smaller image size */
+    .poster-paragraph {max-width: none;} 
+    #poster p {
+        margin: 0 5px; /* Adjust margin on smaller screens */
+        padding-right: 0px; width: 100%; margin-bottom: 2em;
+    }
+    .full-width-line-2 {width: 98%; margin: 0 auto; height: 0.2px; background-color: #000;} /* Page Line */
+}
+@media (max-width: 480px) {h4{font-size: 0.9rem;}}

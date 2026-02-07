@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Grandez Ranch</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/cowboy_hat.png">
+        <meta name="author" content="William Grandez">
+        <meta name="description" content="Jquery assignment">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- jQuery Library-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>    
+    <body>
+        <!-- Curtain Menu (Overlay) -->
+        <div class="icon-container">
+            <i class="fas fa-bars burger-icon" id="burgerMenu"></i> <!-- Burger Icon -->
+            <i class="fas fa-times close-icon" id="closeMenu"></i> <!-- Close Icon -->
+        </div>
+        <div class="curtain-menu" id="curtainMenu">
+            <ul>
+                <li><a href="#header">Trailer</a></li>
+                <li><a href="#movie-details">About</a></li>
+                <li><a href="#poster-img">Poster</a></li>
+                <li><a href="#footer">Connect</a></li>
+            </ul>
+        </div>
+        <!-- Header -->
+        <header id="header">
+            <nav class="navbar">
+                <img src="images/paramount_logo.png" alt="Paramount+ Logo" class="logo">
+            </nav>
+            <div class="hero-content">
+                <button class="btn" id="playTrailerBtn">
+                    <img src="images/play-svgrepo-com.svg" alt="" class="play-icon">
+                </button>
+            </div>
+        </header>            
+        <!-- Modal for Trailer -->
+        <div id="trailerModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <video id="trailerVideo" width="100%" height="100%" controls>
+                    <source src="video/The_Grandez_Ranch.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <!-- Movie Details Section -->
+        <section id="movie-details">
+            <div class="container">
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <p>STARRING</p>
+                        <h4>Christian Grandez, Daisy Aveline</h4>
+                    </div>
+                    <div class="detail-item">
+                        <p>RELEASE DATE</p>
+                        <h4>June 22, 2025</h4>
+                    </div>
+                    <div class="detail-item">
+                        <p>GENRE</p>
+                        <h4>Adventure, Western</h4>
+                    </div>
+                    <div class="detail-item">
+                        <p>DIRECTED BY</p>
+                        <h4>William Grandez</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Line -->
+        <div class="full-width-line"></div>
+        <!-- Poster Section -->
+        <section id="poster">
+            <div class="container">
+                <div class="poster-paragraph">
+                    <p>
+                        The Grandez Ranch follows the trials and triumphs of the Grandez family as they struggle to protect their sprawling ranch nestled in the heart of the rugged frontier.
+                        Filled with gripping drama, breathtaking scenery, and unforgettable characters, it´s a tale of legacy, sacrifice, and the unbreakable bond of family.
+                    </p>
+                </div>
+                <div class="full-width-line-2"></div>
+                <div class="poster-grid" id="poster-img">
+                    <img src="images/poster.webp" alt="The Grandez Ranch Movie Poster">
+                </div>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer id="footer">
+            <div class="container">
+                <div class="back-to-top">
+                    <a href="#" id="backToTop"><i class="fas fa-angle-up"></i></a> <!-- Back to top arrow -->
+                </div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <p class="footer-paragraph">&copy; 2024 William Grandez. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
